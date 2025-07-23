@@ -37,19 +37,19 @@ This repository contains a partial differential equation (PDE) based predictive 
 ## Installation
 
 ### Environment Setup
-1. **Install FEniCS and hIPPYlib**:
+
+1. **Create conda environment**:
+   ```bash
+   conda env create -f environment.yml
+   conda activate tumor-prediction
+   ```
+2. **Install FEniCS and hIPPYlib**:
    ```bash
    # Using conda 
    conda install -c conda-forge fenics
    pip install hippylib
    ```
-
-2. **Create conda environment**:
-   ```bash
-   conda env create -f environment.yml
-   conda activate tumor-prediction
-   ```
-
+   
 ## Usage
 
 ### 1. Generate Reduced-Order Subspaces
@@ -111,6 +111,7 @@ The tumor growth problem is built from [1]. We extend the inverse problem to seq
 The LANO architecture is built from [2] and developed further to achieve accuracy for time-dependent PDE problems.
 
 [1] Liang, Baoshan, et al. "Bayesian inference of tissue heterogeneity for individualized prediction of glioma growth." IEEE Transactions on Medical Imaging 42.10 (2023): 2865-2875.
+
 [2] O'Leary-Roseberry, Thomas, et al. "Derivative-informed neural operator: an efficient framework for high-dimensional parametric derivative learning." Journal of Computational Physics 496 (2024): 112555.
 
 
